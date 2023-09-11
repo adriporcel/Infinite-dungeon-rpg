@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class StatsApplier : MonoBehaviour
 {
-    // This script applies the stats taken from PlayerClasses.cs or Creatures.cs to the Player and Enemy GameObects
+    // This script applies the stats taken from PlayerClasses.cs or Creatures.cs to the Player and Enemy
+    // GameObects during the game
 
     public string playerName;
     
@@ -45,7 +46,8 @@ public class StatsApplier : MonoBehaviour
             _playerClass = _GLOBAL.playerClass;
 
             GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + _playerClass);
-            GameObject.Find("PassiveIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Icons/Passives/" + _playerClass + "Passive");
+            GameObject.Find("PassiveIcon").GetComponent<Image>().sprite = Resources
+                                          .Load<Sprite>("Icons/Passives/" + _playerClass + "Passive");
 
             nameAndLevel.SetText(playerName + "  Lvl " + level);
 
@@ -93,37 +95,52 @@ public class StatsApplier : MonoBehaviour
             {
                 _gameManager.gameReady = true;
             }
-                
+
             else if (transform.position.x >= _enemySpawnerDestination.x - 1f)
+            {
                 transform.position = _enemySpawnerDestination;
+            }
             else if (transform.position != _enemySpawnerDestination)
+            {
                 transform.position = Vector3.Lerp(transform.position, _enemySpawnerDestination, _GLOBAL.timeMultiplier * 5f * Time.deltaTime);
+            }
         }
 
         if (healthRegenMultiplied != 0 && _gameManager.gameReady)
         {
             if (currentHealth > 0 && currentHealth < healthMultiplied)
+            {
                 currentHealth += healthMultiplied * (healthRegenMultiplied / 1000) * Time.deltaTime;
+            }
         }
 
         // Update Health bar UI
         _healthUpdateTick -= Time.deltaTime;
+
         if (_healthUpdateTick <= 0f)
         {
             healthBar.value = currentHealth;
             _healthUpdateTick = 0.2f;
+
             if (gameObject.name == "Player(Clone)")
             {
                 if (_playerClass == "Berserker") // Berserker passive speed increase on health lost is calculated here
                 {
-                    float spMultiplied = _speed + (_speed * (speedMultiplier / 100f));
-                    speedMultiplied = spMultiplied + (spMultiplied * Mathf.Min(1 - currentHealth / healthMultiplied, 1 + _GLOBAL.passive["capMinimumHealth"] * spMultiplied));
-                    _passive = (Mathf.Min(1 - currentHealth / healthMultiplied, 1 + _GLOBAL.passive["capMinimumHealth"] * spMultiplied)) * 100;
-                    speedDisplay.SetText(speedMultiplied.ToString("f2"));
+                    float speedMultiplied = _speed + (_speed * (speedMultiplier / 100f));
+                    this.speedMultiplied = speedMultiplied + (speedMultiplied * Mathf.Min(1 - currentHealth / healthMultiplied, 1 + _GLOBAL.passive["capMinimumHealth"] * speedMultiplied));
+                    _passive = (Mathf.Min(1 - currentHealth / healthMultiplied, 1 + _GLOBAL.passive["capMinimumHealth"] * speedMultiplied)) * 100;
+                    
+                    speedDisplay.SetText(this.speedMultiplied.ToString("f2"));
                     passiveDisplay.SetText(_passive.ToString("f0") + "%");
+                    
                     if (currentHealth != healthMultiplied)
+                    {
                         speedDisplay.color = new Color32(43, 194, 48, 255); // Green colour
-                    else speedDisplay.color = new Color32(255, 255, 255, 255); // White colour
+                    }
+                    else
+                    {
+                        speedDisplay.color = new Color32(255, 255, 255, 255); // White colour
+                    }
                 }
                 else if (_playerClass == "Warrior")
                 {
@@ -143,25 +160,36 @@ public class StatsApplier : MonoBehaviour
             speedDisplay.SetText((speedMultiplied - speedReduction).ToString("f2"));
             speedDisplay.color = new Color32(184, 11, 11, 255); // Red colour
         }
-        else speedDisplay.SetText(speedMultiplied.ToString("f2"));
+        else
+        {
+            speedDisplay.SetText(speedMultiplied.ToString("f2"));
+        }
 
         defenseDisplay.SetText(defenseMultiplied.ToString("f0"));
         dodgeDisplay.SetText(dodgeMultiplied.ToString("f0"));
         healthRegenDisplay.SetText(healthRegenMultiplied.ToString("f0"));
         lifeStealDisplay.SetText(lifeStealMultiplied.ToString("f0"));
+
         if (gameObject.name == "Player(Clone)")
         {
             int levelWithCapAtTen = Mathf.Min(level, 10);
 
             luckDisplay.SetText(luckMultiplied.ToString("f0"));
-            if (_playerClass == "Rogue")
-                _passive = _GLOBAL.passive["levelMultiplyer"] * levelWithCapAtTen;
-            else if (_playerClass == "Warrior")
-                _passive = (_GLOBAL.passive["levelMultiplyer"] * levelWithCapAtTen) * 100;
-            else if (_playerClass == "TimeLord")
-                _passive = (_GLOBAL.passive["levelMultiplyer"] * levelWithCapAtTen) * 100;
-            else if (_playerClass == "Berserker")
-                _passive = 0;
+            switch (_playerClass)
+            {
+                case "Rogue":
+                    _passive = _GLOBAL.passive["levelMultiplyer"] * levelWithCapAtTen;
+                    break;
+                case "Warrior":
+                    _passive = (_GLOBAL.passive["levelMultiplyer"] * levelWithCapAtTen) * 100;
+                    break;
+                case "TimeLord":
+                    _passive = (_GLOBAL.passive["levelMultiplyer"] * levelWithCapAtTen) * 100;
+                    break;
+                case "Berserker":
+                    _passive = 0;
+                    break;
+            }
             passiveDisplay.SetText(_passive.ToString() + "%");
         }
     }
@@ -261,7 +289,6 @@ public class StatsApplier : MonoBehaviour
 
     public void AddEarnedXp(int xpEarned)
     {
-        
         xp += xpEarned;
 
         if (xp >= levelOneCap * level * level * levelCapMod)
@@ -275,7 +302,6 @@ public class StatsApplier : MonoBehaviour
 
     public void AddEarnedGold(int goldEarned)
     {
-
         _GLOBAL.playerGold = goldEarned;
     }
 }
