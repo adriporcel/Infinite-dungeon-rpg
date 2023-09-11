@@ -1,0 +1,8 @@
+-Create a CONSTANTS script to keep the following
+
+Tick (set to 0.2f * Time.DeltaTime)
+
+
+-Sripts that need this variable
+Stats.cs
+Manager.cs un void Update

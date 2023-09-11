@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LevelUpMenu_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: d602aee26d3502e4da53e1c53d61f42f, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 9151538983703937075
+  m_TableData:
+  - m_Id: 27239735296
+    m_Localized: Level up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8565617942528
+    m_Localized: lvl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42737688576
+    m_Localized: 'Points available:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52594302976
+    m_Localized: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99193020416
+    m_Localized: Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101302755328
+    m_Localized: Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103215357952
+    m_Localized: Defense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104628838400
+    m_Localized: Dodge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106038124544
+    m_Localized: Health regen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107128643584
+    m_Localized: Life steal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108038807552
+    m_Localized: Luck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138095190016
+    m_Localized: Reassign
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 9151538983703937075
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00601dae08000000

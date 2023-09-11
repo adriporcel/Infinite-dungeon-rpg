@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CharacterSelection_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: db7a46291ec751245af0f453caf1b77f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 40980275200
+    m_Localized: "Los p\xEDcaros pueden lanzar un ataque doble que causa un 70% de
+      da\xF1o en el segundo golpe.\r\nEsta probabilidad aumenta un 5% por cada nivel
+      del personaje hasta un m\xE1ximo de 50%"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180521676800
+    m_Localized: "P\xEDcaro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3350730727424
+    m_Localized: Guerrero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4909866770432
+    m_Localized: "Se\xF1or del tiempo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5233549598720
+    m_Localized: Berseker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3347564027904
+    m_Localized: "Los guerreros tienen una armadura natural que se regenera tras
+      cada pelea equivalente a un porcentaje de la salud m\xE1xima.\nMientras la
+      armadura est\xE9 activa, la defensa aumenta un 25%.\nEl porcentaje de armadura
+      equivalente a la salud aumenta un 1% por nivel hasta un 10%"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5231217565696
+    m_Localized: "Los berserkers atacan m\xE1s r\xE1pido cuando pierden salud, tambi\xE9n
+      ser\xE1n m\xE1s f\xE1ciles de ser atacados cuanto m\xE1s pierdan el control.
+      La velocidad de ataque aumentada nunca puede ser el doble de la velocidad de
+      ataque base"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4905680855040
+    m_Localized: "Los Se\xF1ores del Tiempo pueden ralentizar el mundo que los rodea
+      haciendo que la velocidad de ataque del enemigo sea m\xE1s lenta.\nEsta habilidad
+      aumenta un 2% por nivel hasta un 20%."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45399706263552
+    m_Localized: Elige un personaje
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

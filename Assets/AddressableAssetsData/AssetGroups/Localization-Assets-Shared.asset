@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a9088fb759ce47442b40ea0641c12d07
+  m_SerializeEntries:
+  - m_GUID: db7a46291ec751245af0f453caf1b77f
+    m_Address: Assets/Localisation/UIText Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f5fad19d20d81964f9792ea665f0658e
+    m_Address: Assets/Localisation/UIButtons Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: d602aee26d3502e4da53e1c53d61f42f
+    m_Address: Assets/Localisation/LevelUpMenu Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 15d777a8c9db1ca46a0abf2f547c7536, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 148d19006de87524f9182129b0b186b6, type: 2}
+    - {fileID: 11400000, guid: f97e4674000612148a03a43a79f8123c, type: 2}

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CharacterSelection_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: db7a46291ec751245af0f453caf1b77f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 40980275200
+    m_Localized: 'Rogues have a chance of hitting the enemy twice, but the damage
+      of the second strike is decreased to 70%
+
+      Double hit chance increases
+      5% every level up to 50%
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180521676800
+    m_Localized: Rogue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3350730727424
+    m_Localized: Warrior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4909866770432
+    m_Localized: Time Lord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5233549598720
+    m_Localized: Berserker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3347564027904
+    m_Localized: 'Warriors have natural armor that regenerates after every fight
+      equal to a percentage of the maximum health.
+
+      While the armor is active
+      the defense increased 25%.
+
+      The percentage of armor equivalent to health
+      increases 1% per level up to 10%'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5231217565696
+    m_Localized: Berserkers attack faster when they lose health, they will also be
+      easier to target the more they lose control. Increased attack speed can never
+      be double than base attack speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4905680855040
+    m_Localized: 'Time Lords can slow the world around them making the enemy attack
+      speed slower.
+
+      This skill increases 2% per level up to 20%.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45399706263552
+    m_Localized: Choose a character
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

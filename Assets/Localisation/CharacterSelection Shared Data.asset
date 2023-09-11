@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: CharacterSelection Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: CharacterSelection
+  m_TableCollectionNameGuidString: db7a46291ec751245af0f453caf1b77f
+  m_Entries:
+  - m_Id: 40980275200
+    m_Key: RoguePassiveDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180521676800
+    m_Key: RogueName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3347564027904
+    m_Key: WarriorPassiveDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3350730727424
+    m_Key: WarriorName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4905680855040
+    m_Key: TimeLordPassiveDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4909866770432
+    m_Key: TimeLordName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5231217565696
+    m_Key: BerserkerPassiveDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5233549598720
+    m_Key: BerserkerName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45399706263552
+    m_Key: MainTitle
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 9151538983703937048
+  references:
+    version: 2
+    RefIds:
+    - rid: 9151538983703937048
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1654873591670
