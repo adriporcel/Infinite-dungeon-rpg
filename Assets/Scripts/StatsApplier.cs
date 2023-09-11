@@ -34,7 +34,12 @@ public class StatsApplier : MonoBehaviour
     Creatures _creaturesList;
     GameManager _gameManager;
 
+    Color _greenDisplayColour = new Color32(43, 194, 48, 255);
+    Color _whiteDisplayColour = new Color32(255, 255, 255, 255);
+
     GLOBAL _GLOBAL;
+
+    bool _warriorReduceDefensePassive = true;
 
     private void Start()
     {
@@ -53,6 +58,9 @@ public class StatsApplier : MonoBehaviour
 
             if (_playerClass == "Warrior")
             {
+                defenseMultiplied = _defense * 1.25f;
+                defenseDisplay.color = _greenDisplayColour;
+
                 armourBarObject.SetActive(true);
                 armour = healthMultiplied * Mathf.Min(_GLOBAL.passive["levelMultiplyer"] * level, _GLOBAL.passive["cap"]);
 
@@ -135,16 +143,25 @@ public class StatsApplier : MonoBehaviour
                     
                     if (currentHealth != healthMultiplied)
                     {
-                        speedDisplay.color = new Color32(43, 194, 48, 255); // Green colour
+                        speedDisplay.color = _greenDisplayColour;
                     }
                     else
                     {
-                        speedDisplay.color = new Color32(255, 255, 255, 255); // White colour
+                        speedDisplay.color = _whiteDisplayColour;
                     }
                 }
                 else if (_playerClass == "Warrior")
                 {
                     armourBar.value = armour;
+
+                    // Defense boost is lost after passive armour is depleted
+                    if (armourBar.value <= 0 && _warriorReduceDefensePassive)
+                    {
+                        defenseDisplay.color = _whiteDisplayColour;
+                        GetPlayerPrefs();
+                        UpdateStatsOnScreen();
+                        _warriorReduceDefensePassive = false;
+                    }
                 }
             }
         }
